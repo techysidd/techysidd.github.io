@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio - Siddharth</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+line-height: 2;
+      margin: 0;
+      background-color: cornsilk;
+      font-family: 'Poppins', sans-serif;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+    header {
+      background-color: #fff;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .logo {
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    /* Hamburger Styles */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background-color: #333;
+      margin: 4px 0;
+      transition: 0.4s;
+    }
+
+    nav {
+      display: flex;
+    }
+
+    nav a {
+      margin-left: 15px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      color: #007bff;
+    }
+
+    /* Mobile Navigation */
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background-color: #fff;
+        flex-direction: column;
+        width: 200px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        padding: 15px;
+        border-radius: 10px;
+      }
+      nav.active {
+        display: flex;
+      }
+      .hamburger {
+        display: flex;
+      }
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 20px;
+     
+      background-color: cornsilk;
+    }
+
+ .con {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 20px;
+ text-align: center;
+     
+      background-color: cornsilk;
+    }
+
+
+    .profile-img {
+      width: 160px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 1.7rem;
+      margin-bottom: 10px;
+      color: darkseagreen;
+    }
+
+    .tagline {
+      color: #666;
+      font-size: 1rem;
+      margin-bottom: 30px;
+    }
+
+    .card {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo"><strong>Portfolio</strong></div>
+
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <nav id="navMenu">
+      <a href="#education">Education</a>
+      <a href="#skills">Skills</a>
+      <a href="#hobbies">Hobbies</a>
+      <a href="#achievements">Achievements</a>
+      <a href="#resume">Resume</a>
+    </nav>
+  </header>
+
+  <div class="con">
+    <img src="your-photo.jpg" alt="pfp" class="profile-img" />
+    <h1>Siddharth Gawali</h1>
+    <p class="tagline">Aspiring Entrepreneurial Mindset</p>
+  </div>
+
+  <div id="education" class="container">
+    <div class="card">
+      <h2>Education</h2>
+      <p>⚫Class X (SSC): 85.2% <br>
+      ⚫Class XII (HSC): 73.5% <br>
+      ⚫Currently Pursuing: BBA in Digital Business Entrepreneurship, IIM Bangalore</p>
+    </div>
+  </div>
+
+  <div id="skills" class="container">
+    <div class="card">
+      <h2>Skills</h2>
+      <p>⚫ Collaborative leader with a goal-driven mindset <br>
+⚫ Excellent communicator with sharp analytical skills <br>
+⚫ Strategic thinker who simplifies complexity <br>
+⚫ Adaptable, quick learner with strong work ethic <br>
+⚫ Committed to continuous personal and professional growth <br></p>
+    </div>
+  </div>
+
+  <div id="hobbies" class="container">
+    <div class="card">
+      <h2>Hobbies</h2>
+      <p>⚫Passionate about music, particularly playing acoustic guitar, and exploring music theory and creative expression.<br>
+        ⚫Actively involved in sports, including football, cricket, and chess, which enhance teamwork, physical fitness, and strategic thinking.</p>
+    </div>
+  </div>
+
+  <div id="achievements" class="container">
+    <div class="card">
+      <h2>Achievements</h2>
+      <p><b>⚫Chess Competition Winner <br> Lokmat Campus Club</b> – Recognised for strong strategic thinking and performance in a competitive setting  <br>
+      <b>⚫Winner – Inter-school Speech Competition</b> – Earned top position for effective public speaking, clarity of thought, and confident delivery</p>
+    </div>
+  </div>
+
+  <div id="resume" class="container">
+    <div class="card">
+      <h2>Full Resume</h2>
+      <p><a href="url">PDF</a></p>
+    </div>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('navMenu');
+      nav.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>
